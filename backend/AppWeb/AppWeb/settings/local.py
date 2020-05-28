@@ -23,3 +23,4 @@ INSTALLED_APPS += [
 ]
 
 # flake8: noqa F405
+DEBUG_TOOLBAR_PATCH_SETTINGS = False

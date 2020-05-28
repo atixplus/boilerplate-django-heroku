@@ -22,7 +22,7 @@ urlpatterns = [
     path('', include('web.urls', namespace='web')),
     path('panel/', include('dashboard.urls', namespace='dashboard')),
     path('common/', include('common.urls', namespace='common')),
-    path('accounts/', include('accounts.urls', namespace='accounts')),
+    # path('accounts/', include('accounts.urls', namespace='accounts')),
     path('accounts/api/', include('rest_auth.urls')),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(
