@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>ER - Completando Registro</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="https://blackrockdigital.github.io/startbootstrap-sb-admin-2/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link
+      href="https://blackrockdigital.github.io/startbootstrap-sb-admin-2/css/sb-admin-2.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .bg-register-image {
+        background: url(https://negosentro.com/wp-content/uploads/2016/01/secure-webhosting1-1024x739.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+      .border-left-info, .border-left-warning {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-primary">
+    <div class="container">
+      <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+          <!-- Nested Row within Card Body -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="p-5">
+                <div class="text-center mb-4">
+                  <h1 class="h4 text-gray-900">Notaria Paino</h1>
+                  <h3>Completando Proceso de Registro</h3>
+                </div>
+
+                <div class="row">
+                  <!-- Pending Requests Card Example -->
+                  <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-info shadow h-100 py-2" data-toggle="modal" data-target="#uploadFichaRuc">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Ej. Subir Ficha RUC</div>
+                            <div class="row no-gutters align-items-center">
+                              <div class="col-auto">
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">100%</div>
+                              </div>
+                              <div class="col">
+                                <div class="progress progress-sm mr-2">
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    <!-- Pending Requests Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                      <div class="card border-left-info shadow h-100 py-2" data-toggle="modal" data-target="#uploadFichaRuc">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Ej. Subir Vigencia de Poder</div>
+                              <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">100%</div>
+                                </div>
+                                <div class="col">
+                                  <div class="progress progress-sm mr-2">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-auto">
+                              <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  
+                  <!-- Pending Requests Card Example -->
+                  <div class="col-md-3 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2" data-toggle="modal" data-target="#addSuperAdmin">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                              Registrar SuperAdministrador
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                              <div class="col-auto">
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">0%</div>
+                              </div>
+                              <div class="col">
+                                <div class="progress progress-sm mr-2">
+                                  <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pending Requests Card Example -->
+                  <div class="col-md-3 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2" data-toggle="modal" data-target="#tableUsers">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div
+                              class="text-xs font-weight-bold text-warning text-uppercase mb-1"
+                            >
+                              Usuarios Registrados
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                              1
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="col-md-3 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div
+                              class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                            >
+                              Representantes Legales
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                              Solicitar Certificado
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <i
+                              class="fas fa-certificate fa-2x text-gray-300"
+                            ></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+
+                  <!-- <div class="col-md-3 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div
+                              class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                            >
+                              Usuarios
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                              Solicitar Certificado
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <i
+                              class="fas fa-certificate fa-2x text-gray-300"
+                            ></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  <!-- <div class="m-auto">
+                    <div class="alert alert-warning" role="alert">
+                      Cuando la info este llena se cambiara a la siguiente vista
+                      <a href="{}">aqui</a>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload File Begin -->
+    <div class="modal" tabindex="-1" role="dialog" id="uploadFichaRuc">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Subir Ficha RUC</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupFileAddon01">Subir</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                  <label class="custom-file-label" for="inputGroupFile01">Elegir Archivo</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Upload File End -->
+
+    <!-- Add Superadmin Begin -->
+    <div class="modal" tabindex="-1" role="dialog" id="addSuperAdmin">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Agregar Super Administrador</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Correo Electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nombres</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Apellidos</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'web:keeper-er-email' %}?type=Administrador Principal&name=Fernando Paino" target="_blank">ver email demo</a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add Superadmin end -->
+
+    <!-- Table User Begin -->
+    <div class="modal" tabindex="-1" role="dialog" id="tableUsers">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Usuarios Registrados</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Persona</th>
+                  <th>Correo Electrónico</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>María Ruiz Ruiz</td>
+                  <td>mariaruiz@gmail.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">            
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#addUser" >Agregar Nuevo Usuario</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Table User end -->
+
+    <!-- Add User Begin -->
+    <div class="modal" tabindex="-1" role="dialog" id="addUser">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Agregar Usuario</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Correo Electrónico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Nombres</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Apellidos</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <a href="{% url 'web:keeper-er-email' %}?type=Operador&name=Maria Ruiz" target="_blank">ver email demo</a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Add User end -->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://blackrockdigital.github.io/startbootstrap-sb-admin-2/vendor/jquery/jquery.min.js"></script>
+    <script src="https://blackrockdigital.github.io/startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="https://blackrockdigital.github.io/startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="https://blackrockdigital.github.io/startbootstrap-sb-admin-2/js/sb-admin-2.min.js"></script>
+  </body>
+</html>

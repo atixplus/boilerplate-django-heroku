@@ -29,7 +29,9 @@ urlpatterns = [
     path('er/productos/certificado-persona-natural', TemplateView.as_view(template_name='web/er/products/form.html'), name='er-products-edit'),
     path('er/agencias/', TemplateView.as_view(template_name='web/er/ars/list.html'), name='er-ars-list'),
     path('er/agencias/gonzales/', TemplateView.as_view(template_name='web/er/ars/detail.html'), name='er-ar-detail'),
+    path('er/ordenes/', TemplateView.as_view(template_name='web/er/orders/list.html'), name='er-orders-list'),
     
     path('er/agencia/', TemplateView.as_view(template_name='web/er/ars/login.html'), name='er-ar-login'),
     path('er/nueva-agencia/', TemplateView.as_view(template_name='web/er/new-ar.html'), name='er-new-ar'),
+    path('er/agencia/tareas/', TemplateView.as_view(template_name='web/er/ar/tasks.html'), name='er-ar-tasks'),
 ]
