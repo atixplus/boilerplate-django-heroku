@@ -48,7 +48,7 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center  mb-4">
-                    <h1 class="h4 text-gray-900">Iniciar Sesion en la Entidad de Registro</h1>
+                    <h1 class="h4 text-gray-900">Iniciar Sesion</h1>
                     Seleccione un certificado
                   </div>
                   <div class="row">
@@ -58,7 +58,7 @@
                           <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                               <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Certificado Digital</div>
-                              <div class="h5 mb-0 font-weight-bold text-gray-800">Fernando Palomino</div>
+                              <div class="h5 mb-0 font-weight-bold text-gray-800">Pablo Gonzales</div>
                             </div>
                             <div class="col-auto">
                               <i class="fas fa-certificate fa-2x text-gray-300"></i>
@@ -67,41 +67,41 @@
                         </div>
                       </div>
                     </div>
-
-                    <div class="col-12 mb-4">
-                      <div class="card border-left-warning shadow h-100 py-2">
-                        <div class="card-body">
-                          <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                              <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Certificado Digital</div>
-                              <div class="h5 mb-0 font-weight-bold text-gray-800">Jhon Gonzales</div>
-                            </div>
-                            <div class="col-auto">
-                              <i class="fas fa-certificate fa-2x text-gray-300"></i>
-                            </div>
+                    <br>
+                    <hr>
+                    <div>
+                      <div class="mx-auto text-center py-2">
+                        o 
+                        <br>
+                        continuar con el proceso de apertura de cuenta
+                        <br>
+                      </div>
+                      
+                      <form class="user">
+                        <div class="form-group">
+                          <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                        </div>
+                        <div class="form-group">
+                          <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                          <div class="custom-control custom-checkbox small">
+                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                            <label class="custom-control-label" for="customCheck">Recordarme</label>
                           </div>
                         </div>
+                        <a href="{% url 'web:keeper-er-tasks' %}" class="btn btn-primary btn-user btn-block">
+                          Ingresar
+                        </a>
+                      </form>
+                      <hr>
+                      <div class="text-center">
+                        <a class="small" href="#">¿Olvido su contraseña?</a>
                       </div>
                     </div>
-
-                    <div class="col-12 mb-4">
-                      <div class="card border-left-warning shadow h-100 py-2">
-                        <div class="card-body">
-                          <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                              <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Certificado Digital</div>
-                              <div class="h5 mb-0 font-weight-bold text-gray-800">Maria Hernandez</div>
-                            </div>
-                            <div class="col-auto">
-                              <i class="fas fa-certificate fa-2x text-gray-300"></i>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="mx-auto">
+                      <a href="{% url 'web:er-new-ar' %}">Solicitar Apertura de Cuenta Agencia de Registro</a>
                     </div>
-                        <!-- <div class="mx-auto">
-                          <a href="{% url 'web:er-new-ar' %}">Solicitar Apertura de Cuenta Agencia de Registro</a>
-                        </div> -->
                   </div>
                   
                 </div>

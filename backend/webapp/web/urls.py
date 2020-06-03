@@ -14,10 +14,22 @@ urlpatterns = [
     path('keeper/er/email/', TemplateView.as_view(template_name='web/keeper/er/email.html'), name='keeper-er-email'),
     path('keeper/er/datos-cd/', TemplateView.as_view(template_name='web/keeper/er/cd-form.html'), name='keeper-cd-form'),
 
-    path('er/login/', TemplateView.as_view(template_name='web/er/login.html'), name='er-login'),
+    path('keeper/admin/', TemplateView.as_view(template_name='web/keeper/admin/home.html'), name='keeper-admin'),
+    path('keeper/admin/users/', TemplateView.as_view(template_name='web/keeper/admin/users/list.html'), name='keeper-users-list'),
+    path('keeper/admin/users/form/', TemplateView.as_view(template_name='web/keeper/admin/users/form.html'), name='keeper-users-add'),
+    
+    path('keeper/admin/ers/', TemplateView.as_view(template_name='web/keeper/admin/ers/list.html'), name='keeper-ers-list'),
+    path('keeper/admin/ers/paino', TemplateView.as_view(template_name='web/keeper/admin/ers/detail.html'), name='keeper-er-detail'),
+
+    path('er/login/', TemplateView.as_view(template_name='web/er/login.html'), name='er-login'),    
     path('er/inicio/', TemplateView.as_view(template_name='web/er/home.html'), name='er-home'),
     path('er/usuarios/', TemplateView.as_view(template_name='web/er/users/list.html'), name='er-users-list'),
     path('er/usuarios/enviar-invitacion', TemplateView.as_view(template_name='web/er/users/form.html'), name='er-users-invitation'),
     path('er/productos/', TemplateView.as_view(template_name='web/er/products/list.html'), name='er-products-list'),
     path('er/productos/certificado-persona-natural', TemplateView.as_view(template_name='web/er/products/form.html'), name='er-products-edit'),
+    path('er/agencias/', TemplateView.as_view(template_name='web/er/ars/list.html'), name='er-ars-list'),
+    path('er/agencias/gonzales/', TemplateView.as_view(template_name='web/er/ars/detail.html'), name='er-ar-detail'),
+    
+    path('er/agencia/', TemplateView.as_view(template_name='web/er/ars/login.html'), name='er-ar-login'),
+    path('er/nueva-agencia/', TemplateView.as_view(template_name='web/er/new-ar.html'), name='er-new-ar'),
 ]
