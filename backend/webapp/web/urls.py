@@ -23,6 +23,7 @@ urlpatterns = [
 
     path('er/login/', TemplateView.as_view(template_name='web/er/login.html'), name='er-login'),    
     path('er/inicio/', TemplateView.as_view(template_name='web/er/home.html'), name='er-home'),
+    path('er/config/', TemplateView.as_view(template_name='web/er/config.html'), name='er-config'),
     path('er/usuarios/', TemplateView.as_view(template_name='web/er/users/list.html'), name='er-users-list'),
     path('er/usuarios/enviar-invitacion', TemplateView.as_view(template_name='web/er/users/form.html'), name='er-users-invitation'),
     path('er/productos/', TemplateView.as_view(template_name='web/er/products/list.html'), name='er-products-list'),
