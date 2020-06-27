@@ -1,0 +1,50 @@
+{% extends 'web/keeper/admin/layout.html' %}
+
+{% block link %}
+{% endblock %}
+
+{% block content %}
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Agregar nuevo usuario</h1>
+  <!-- <p class="mb-4">Lista de Productos habilitados para manejar la ER</p> -->
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Nuevo Usuario</h6>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <label for="exampleInputPassword1">Nombres</label>          
+          <input type="email" class="form-control" >
+          <!-- <small id="emailHelp" class="form-text text-muted">La persona recibirá un correo con su usuario y contraseña</small> -->
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Apellidos</label>          
+          <input type="email" class="form-control" >
+          <!-- <small id="emailHelp" class="form-text text-muted">La persona recibirá un correo con su usuario y contraseña</small> -->
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Correo Electrónico</label>          
+          <input type="email" class="form-control" >
+          <small id="emailHelp" class="form-text text-muted">La persona recibirá un correo con su usuario y contraseña</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Rol</label>          
+          <select class="form-control" >
+            <option>Seleccione uno</option>
+            <option>Operador</option>
+          </select>
+        </div>
+        <!-- <button type="submit" class="btn btn-primary">Guardar</button> -->
+        <a class="btn btn-primary" href="{% url 'web:er-products-list'%}">Guardar</a>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

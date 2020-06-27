@@ -25,12 +25,16 @@ urlpatterns = [
     path('er/inicio/', TemplateView.as_view(template_name='web/er/home.html'), name='er-home'),
     path('er/config/', TemplateView.as_view(template_name='web/er/config.html'), name='er-config'),
     path('er/usuarios/', TemplateView.as_view(template_name='web/er/users/list.html'), name='er-users-list'),
-    path('er/usuarios/enviar-invitacion', TemplateView.as_view(template_name='web/er/users/form.html'), name='er-users-invitation'),
+
+    # path('er/usuarios/enviar-invitacion', TemplateView.as_view(template_name='web/er/users/form.html'), name='er-users-invitation'),
+    path('er/usuarios/enviar-invitacion', views.invite_user, name='er-users-invitation'),
+
     path('er/productos/', TemplateView.as_view(template_name='web/er/products/list.html'), name='er-products-list'),
     path('er/productos/certificado-persona-natural', TemplateView.as_view(template_name='web/er/products/form.html'), name='er-products-edit'),
     path('er/agencias/', TemplateView.as_view(template_name='web/er/ars/list.html'), name='er-ars-list'),
     path('er/agencias/gonzales/', TemplateView.as_view(template_name='web/er/ars/detail.html'), name='er-ar-detail'),
     path('er/ordenes/', TemplateView.as_view(template_name='web/er/orders/list.html'), name='er-orders-list'),
+    path('er/ordenes/detail/', TemplateView.as_view(template_name='web/er/orders/detail.html'), name='er-orders-detail'),
     
     path('er/agencia/', TemplateView.as_view(template_name='web/er/ars/login.html'), name='er-ar-login'),
     path('er/nueva-agencia/', TemplateView.as_view(template_name='web/er/new-ar.html'), name='er-new-ar'),
