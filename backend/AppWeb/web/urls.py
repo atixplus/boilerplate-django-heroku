@@ -39,4 +39,6 @@ urlpatterns = [
     path('er/agencia/', TemplateView.as_view(template_name='web/er/ars/login.html'), name='er-ar-login'),
     path('er/nueva-agencia/', TemplateView.as_view(template_name='web/er/new-ar.html'), name='er-new-ar'),
     path('er/agencia/tareas/', TemplateView.as_view(template_name='web/er/ar/tasks.html'), name='er-ar-tasks'),
+
+    path('sendgrid-webhook/', view.sendgrid_webhook, name='sendgrid-webhook')
 ]
