@@ -27,7 +27,7 @@ urlpatterns = [
     path('er/usuarios/', TemplateView.as_view(template_name='web/er/users/list.html'), name='er-users-list'),
 
     # path('er/usuarios/enviar-invitacion', TemplateView.as_view(template_name='web/er/users/form.html'), name='er-users-invitation'),
-    path('er/usuarios/enviar-invitacion/', views.invite_user, name='er-users-invitation'),
+    path('er/usuarios/enviar-mail/', views.invite_user, name='er-users-invitation'),
 
     path('er/productos/', TemplateView.as_view(template_name='web/er/products/list.html'), name='er-products-list'),
     path('er/productos/certificado-persona-natural', TemplateView.as_view(template_name='web/er/products/form.html'), name='er-products-edit'),
