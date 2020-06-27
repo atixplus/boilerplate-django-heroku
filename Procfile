@@ -1,2 +1,2 @@
 release: ./bin/release.sh
-web: cd backend/webapp ; gunicorn webapp.wsgi --log-file -
+web: cd backend/AppWeb ; gunicorn AppWeb.wsgi --log-file -

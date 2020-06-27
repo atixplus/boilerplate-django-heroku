@@ -1,4 +1,4 @@
-cd backend/webapp
+cd backend/AppWeb
 python manage.py migrate --no-input
 python manage.py loaddata ../demo/demo.json
 
