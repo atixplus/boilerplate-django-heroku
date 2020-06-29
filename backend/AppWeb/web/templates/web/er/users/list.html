@@ -44,7 +44,7 @@
               <td>{{user.date_joined}}</td>
               <td>
                 <ul>
-                {% for state in user_state %}
+                {% for state in user.states %}
                   <li title="{{state.timestamp}}">{{state.event}}</li>
                 {% endfor %}
               </ul>
