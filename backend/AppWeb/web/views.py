@@ -59,8 +59,8 @@ def sendgrid_webhook(request):
                 message = eventMessage['event']
                 timestamp = eventMessage['timestamp']
                 State.objects.create(user=user, event=message, timestamp=timestamp)
-        except:
-            pass
+        except Exception as e:
+            print(str(e))
 
     return HttpResponse()
 
