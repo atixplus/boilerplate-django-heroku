@@ -52,7 +52,8 @@ def invite_user(request):
 @require_POST
 def sendgrid_webhook(request):
     if request.method == 'POST':
-        eventsMessage = json.loads(request.body)        
+        eventsMessage = json.loads(request.body)
+        print(eventsMessage)
         try:
             for eventMessage in eventsMessage:
                 user = User.objects.get(email=eventMessage['email'])
