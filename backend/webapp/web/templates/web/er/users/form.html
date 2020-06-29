@@ -17,16 +17,21 @@
       <form action="." method="POST">
         {% csrf_token %}
         <div class="form-group">
+          <label for="exampleInputPassword1">Nombre</label>          
+          <input type="text" class="form-control" name="name" required>          
+        </div>
+        <div class="form-group">
           <label for="exampleInputPassword1">Correo Electrónico</label>          
-          <input type="email" class="form-control" >
+          <input type="email" class="form-control" name="email" required>
           <small id="emailHelp" class="form-text text-muted">La persona recibirá un correo para inciar el proceso de solicitud de certificado y asociación a la ER</small>
-
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Rol</label>          
-          <select class="form-control" >
-            <option>Seleccione uno</option>
-            <option>Operador</option>
+          <select class="form-control" name="rol" required>
+            <option disabled selected>Seleccione uno</option>
+            <option value="operator">Operador</option>
+            <option value="other-1">Other 1</option>
+            <option value="other 2">Other 2</option>
           </select>
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>

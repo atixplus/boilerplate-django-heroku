@@ -19,7 +19,7 @@
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Usuarios</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Usuarios.</h6>
       
     </div>
     <div class="card-body">
@@ -34,25 +34,14 @@
             </tr>
           </thead>
           <tbody>
+            {% for user in users%}
             <tr>
-              <td>Fernando</td>
-              <td>Palomino Jimenez</td>
-              <td>Representante Legal</td>
-              <td>2011/04/25</td>
+              <td>{{user.first_name}}</td>
+              <td>{{user.last_name}}</td>
+              <td>rol x</td>
+              <td>{{user.date_joined}}</td>
             </tr>
-            <tr>
-              <td>Maria</td>
-              <td>Ruiz Ruiz</td>
-              <td>Operador</td>
-              <td>2011/04/25</td>
-            </tr>
-            </tr>
-            <tr>
-              <td>Gabriel</td>
-              <td>Escalante</td>
-              <td>???????????</td>
-              <td>2011/04/25</td>
-            </tr>
+            {% endfor %}
           </tbody>
         </table>
       </div>

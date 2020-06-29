@@ -166,3 +166,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 CONTACT_EMAIL = 'atixbot@gmail.com'
+FROM_EMAIL = 'javier@atixplus.com'

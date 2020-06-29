@@ -1,10 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
+
 from django.core.mail import EmailMessage
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 import json
 from django.http import HttpResponse
-
+from django.conf import settings
+from django.contrib.auth.models import User
 # import sendgrid
 # from sendgrid.helpers.mail import Email, Content, Mail, CustomArg
 
@@ -12,24 +15,35 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'web/login.html', locals())
 
+def enlist_users(request):
+    print('here a power line')
+    users = User.objects.all()
+    return render(request, 'web/er/users/list.html', locals())
 
 def invite_user(request):
     print('ya tengo el poder!')
     if request.method == 'POST':
-        email = EmailMessage(
-            'Hello',
-            'Body goes here',
-            'javier@atixplus.com',
-            ['bichocj@gmail.com'],
-            [],
-            reply_to=['another@gmail.com'],
-            headers={'Message-ID': 'bichocj@gmail.com'},
-        )
-        print('emailllllllllllll.send()')
-        print(email.send())
-
-    return render(request, 'web/er/users/form.html', locals())
-
+        try:
+            user = User()
+            user.first_name = request.POST.get('name')
+            user.username = request.POST.get('email')
+            user.email = user.username            
+            user.save()
+            rol = request.POST.get('rol')
+            emailMessage = EmailMessage(
+                'Hola ' + user.first_name,
+                user.first_name + ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+                settings.FROM_EMAIL,
+                [user.email],
+                [],
+                reply_to=['another@gmail.com'],
+                headers={'Message-ID': str(user.id)},
+            )
+            emailMessage.send()
+            return redirect(reverse('web:er-users-list'))
+        except Exception as e:
+            pass
+    return render(request, 'web/er/users/form.html', locals())            
 
 @csrf_exempt
 @require_POST
