@@ -19,6 +19,8 @@ def home(request):
 def enlist_users(request):
     print('here a power line')
     users = User.objects.all()
+    for user in users:
+        user.states = State.objects.filter(user=user)
     return render(request, 'web/er/users/list.html', locals())
 
 def invite_user(request):

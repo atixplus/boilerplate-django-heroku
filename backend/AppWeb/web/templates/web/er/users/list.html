@@ -31,6 +31,7 @@
               <th>Apellidos</th>
               <th>Rol</th>              
               <th>Fecha de creación</th>              
+              <th>Email Estado</th>
             </tr>
           </thead>
           <tbody>
@@ -41,6 +42,13 @@
               <td>{{user.last_name}}</td>
               <td>rol x</td>
               <td>{{user.date_joined}}</td>
+              <td>
+                <ul>
+                {% for state in user_state %}
+                  <li title="{{state.timestamp}}">{{state.event}}</li>
+                {% endfor %}
+              </ul>
+              </td>
             </tr>
             {% endfor %}
           </tbody>
