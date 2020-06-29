@@ -9,6 +9,8 @@ from django.http import HttpResponse
 from django.conf import settings
 from django.contrib.auth.models import User
 from .models import State
+from django.template.loader import get_template
+
 # import sendgrid
 # from sendgrid.helpers.mail import Email, Content, Mail, CustomArg
 
@@ -33,19 +35,26 @@ def invite_user(request):
             user.email = user.username            
             user.save()
             rol = request.POST.get('rol')
+            context = {
+                'first_name': user.first_name,
+                'rol': rol
+            }
+
+            html_content = get_template('web/mailing/base.html').render(context)
             emailMessage = EmailMessage(
                 'Hola ' + user.first_name,
-                user.first_name + ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+                html_content,
                 settings.FROM_EMAIL,
                 [user.email],
                 [],
                 reply_to=['another@gmail.com'],
-                headers={'Message-ID': str(user.id)},
+                headers={'Message-ID': 'message-id:'+str(user.id)},
             )
+            emailMessage.content_subtype = "html"
             emailMessage.send()
             return redirect(reverse('web:er-users-list'))
         except Exception as e:
-            pass
+            print(str(e))
     return render(request, 'web/er/users/form.html', locals())            
 
 @csrf_exempt
