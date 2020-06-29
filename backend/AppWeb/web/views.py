@@ -8,6 +8,7 @@ import json
 from django.http import HttpResponse
 from django.conf import settings
 from django.contrib.auth.models import User
+from .models import State
 # import sendgrid
 # from sendgrid.helpers.mail import Email, Content, Mail, CustomArg
 
@@ -49,13 +50,15 @@ def invite_user(request):
 @require_POST
 def sendgrid_webhook(request):
     if request.method == 'POST':
-        response = json.loads(request.body)
-        print(response)
-
-        # if len(response) > 1:
-        #     event = response[1]
-        # else:
-        #     event = response[0]
+        eventsMessage = json.loads(request.body)        
+        try:
+            for eventMessage in eventsMessage:
+                user = User.objects.get(email=eventMessage['email'])
+                message = eventMessage['event']
+                timestamp = eventMessage['timestamp']
+                State.objects.create(user=user, event=message, timestamp=timestamp)
+        except:
+            pass
 
     return HttpResponse()
 
